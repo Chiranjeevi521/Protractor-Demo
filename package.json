@@ -1,0 +1,17 @@
+{
+  "name": "Protractor_Demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "conf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jasmine": "^2.5.53",
+    "jasmine-spec-reporter": "^4.1.1",
+    "protractor": "^5.1.2"
+  }
+}
