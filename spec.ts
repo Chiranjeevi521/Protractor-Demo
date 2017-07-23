@@ -126,7 +126,7 @@ describe("Test Angular Site", ()=>{
             element(by.model("model[options.key]")).sendKeys("Raman");
 
             element(by.ngClick('Auth.login()')).click();
-            browser.sleep(2000);
+            browser.sleep(3000);
 
         });
 	  
