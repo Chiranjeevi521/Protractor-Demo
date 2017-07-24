@@ -1,8 +1,8 @@
 import { Locator, ProtractorBy } from 'protractor/built/locators';
 import { by } from "protractor";
 
-export let  Customlocator() => {
-
+  export function customlocator() {
+	  
 	by.addLocator('ngClick', (toState,parentelement)=>{
 
 		let using = parentelement || document ;
@@ -15,5 +15,5 @@ export let  Customlocator() => {
 	          }
 	      }		
 
-	},
-}
+	}
+  }

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns2:test-suite xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1500843380789" stop="1500843380797">
+	<name>Test Angular Site Go to super calculator and test addition</name>
+	<title>Test Angular Site Go to super calculator and test addition</title>
+	<test-cases>
+		<test-case start="1500843380789" stop="1500843380789" status="pending">
+			<name>Supercalculator Addition</name>
+			<title>Supercalculator Addition</title>
+			<description></description>
+			<labels>
+			</labels>
+			<parameters>
+			</parameters>
+			<steps>
+			</steps>
+			<attachments>
+			</attachments>
+			<failure>
+				<message>This test was ignored</message>
+				<stack-trace></stack-trace>
+			</failure>
+		</test-case>
+		<test-case start="1500843380790" stop="1500843380790" status="pending">
+			<name>Supercalculator Addition</name>
+			<title>Supercalculator Addition</title>
+			<description></description>
+			<labels>
+			</labels>
+			<parameters>
+			</parameters>
+			<steps>
+			</steps>
+			<attachments>
+			</attachments>
+			<failure>
+				<message>This test was ignored</message>
+				<stack-trace></stack-trace>
+			</failure>
+		</test-case>
+		<test-case start="1500843380792" stop="1500843380792" status="pending">
+			<name>Supercalculator Addition</name>
+			<title>Supercalculator Addition</title>
+			<description></description>
+			<labels>
+			</labels>
+			<parameters>
+			</parameters>
+			<steps>
+			</steps>
+			<attachments>
+			</attachments>
+			<failure>
+				<message>This test was ignored</message>
+				<stack-trace></stack-trace>
+			</failure>
+		</test-case>
+		<test-case start="1500843380793" stop="1500843380793" status="pending">
+			<name>Supercalculator Addition</name>
+			<title>Supercalculator Addition</title>
+			<description></description>
+			<labels>
+			</labels>
+			<parameters>
+			</parameters>
+			<steps>
+			</steps>
+			<attachments>
+			</attachments>
+			<failure>
+				<message>This test was ignored</message>
+				<stack-trace></stack-trace>
+			</failure>
+		</test-case>
+		<test-case start="1500843380794" stop="1500843380794" status="pending">
+			<name>Supercalculator addition using excel data</name>
+			<title>Supercalculator addition using excel data</title>
+			<description></description>
+			<labels>
+			</labels>
+			<parameters>
+			</parameters>
+			<steps>
+			</steps>
+			<attachments>
+			</attachments>
+			<failure>
+				<message>This test was ignored</message>
+				<stack-trace></stack-trace>
+			</failure>
+		</test-case>
+	</test-cases>
+</ns2:test-suite>

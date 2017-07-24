@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const protractor_1 = require("protractor");
-exports.Customlocator = () => {
+function customlocator() {
     protractor_1.by.addLocator('ngClick', (toState, parentelement) => {
         let using = parentelement || document;
         let prefixes = ['ng-click'];
@@ -13,4 +13,5 @@ exports.Customlocator = () => {
             }
         }
     });
-};
+}
+exports.customlocator = customlocator;

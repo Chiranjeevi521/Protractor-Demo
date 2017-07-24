@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns2:test-suite xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1500843367854" stop="1500843380801">
+	<name>Test Angular Site</name>
+	<title>Test Angular Site</title>
+	<test-cases>
+		<test-case start="1500843377355" stop="1500843379492" status="failed">
+			<name>Test Text Field</name>
+			<title>Test Text Field</title>
+			<description></description>
+			<labels>
+			</labels>
+			<parameters>
+			</parameters>
+			<steps>
+			</steps>
+			<attachments>
+			</attachments>
+			<failure>
+				<message>TypeError: Cannot read property &apos;createAttachment&apos; of undefined</message>
+				<stack-trace>TypeError: Cannot read property &apos;createAttachment&apos; of undefined
+    at protractor_1.browser.takeScreenshot.then (D:\GitReporsitories\Protractor-Demo\conf.js:23:38)
+    at ManagedPromise.invokeCallback_ (C:\Users\ADMIN\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1366:14)
+    at TaskQueue.execute_ (C:\Users\ADMIN\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2970:14)
+    at TaskQueue.executeNext_ (C:\Users\ADMIN\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2953:27)
+    at asyncRun (C:\Users\ADMIN\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2813:27)
+    at C:\Users\ADMIN\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:676:7
+    at process._tickCallback (internal/process/next_tick.js:109:7)</stack-trace>
+			</failure>
+		</test-case>
+		<test-case start="1500843379493" stop="1500843380133" status="failed">
+			<name>Entering the value</name>
+			<title>Entering the value</title>
+			<description></description>
+			<labels>
+			</labels>
+			<parameters>
+			</parameters>
+			<steps>
+			</steps>
+			<attachments>
+			</attachments>
+			<failure>
+				<message>TypeError: Cannot read property &apos;createAttachment&apos; of undefined</message>
+				<stack-trace>TypeError: Cannot read property &apos;createAttachment&apos; of undefined
+    at protractor_1.browser.takeScreenshot.then (D:\GitReporsitories\Protractor-Demo\conf.js:23:38)
+    at ManagedPromise.invokeCallback_ (C:\Users\ADMIN\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1366:14)
+    at TaskQueue.execute_ (C:\Users\ADMIN\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2970:14)
+    at TaskQueue.executeNext_ (C:\Users\ADMIN\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2953:27)
+    at asyncRun (C:\Users\ADMIN\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2813:27)
+    at C:\Users\ADMIN\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:676:7
+    at process._tickCallback (internal/process/next_tick.js:109:7)</stack-trace>
+			</failure>
+		</test-case>
+		<test-case start="1500843380133" stop="1500843380788" status="failed">
+			<name>Add New TOD</name>
+			<title>Add New TOD</title>
+			<description></description>
+			<labels>
+			</labels>
+			<parameters>
+			</parameters>
+			<steps>
+			</steps>
+			<attachments>
+			</attachments>
+			<failure>
+				<message>TypeError: Cannot read property &apos;createAttachment&apos; of undefined</message>
+				<stack-trace>TypeError: Cannot read property &apos;createAttachment&apos; of undefined
+    at protractor_1.browser.takeScreenshot.then (D:\GitReporsitories\Protractor-Demo\conf.js:23:38)
+    at ManagedPromise.invokeCallback_ (C:\Users\ADMIN\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1366:14)
+    at TaskQueue.execute_ (C:\Users\ADMIN\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2970:14)
+    at TaskQueue.executeNext_ (C:\Users\ADMIN\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2953:27)
+    at asyncRun (C:\Users\ADMIN\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2813:27)
+    at C:\Users\ADMIN\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:676:7
+    at process._tickCallback (internal/process/next_tick.js:109:7)</stack-trace>
+			</failure>
+		</test-case>
+		<test-case start="1500843380788" stop="1500843380788" status="pending">
+			<name>Selecting a Pluralization Pane</name>
+			<title>Selecting a Pluralization Pane</title>
+			<description></description>
+			<labels>
+			</labels>
+			<parameters>
+			</parameters>
+			<steps>
+			</steps>
+			<attachments>
+			</attachments>
+			<failure>
+				<message>This test has not been implemented yet</message>
+				<stack-trace></stack-trace>
+			</failure>
+		</test-case>
+	</test-cases>
+</ns2:test-suite>

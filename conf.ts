@@ -1,11 +1,12 @@
-import { Config } from "protractor";
+import { Config, browser } from "protractor";
 import { SpecReporter } from "jasmine-spec-reporter";
+let AllureReporter = require('./node_modules/jasmine-allure-reporter/src/Jasmine2AllureReporter.js');
 
 export let config:Config = {
 
     //seleniumAddress : 'http://localhost:4444/wd/hub',
     directConnect : true,
-    framework :"jasmine",
+    framework :"jasmine2",
     specs : ['spec.js'],
     jasmineNodeOpts : {
 
@@ -17,6 +18,18 @@ export let config:Config = {
         displayStacktrace: true
       }
     }));
+
+    jasmine.getEnv().addReporter(new AllureReporter({
+    resultsDir: 'allure-results'
+    }));
+    jasmine.getEnv().afterEach((done)=>{
+        browser.takeScreenshot().then((png)=>{
+          AllureReporter.allure.createAttachment('Screenshot', ()=>{
+            return new Buffer(png, 'base64');
+          }, 'image/png')();
+          done();
+        })
+    });
   }
 
 }
