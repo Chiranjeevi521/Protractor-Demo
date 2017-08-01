@@ -2,6 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const protractor_1 = require("protractor");
 const jasmine_spec_reporter_1 = require("jasmine-spec-reporter");
+const util_1 = require("util");
+const child_process_1 = require("child_process");
 let AllureReporter = require('jasmine-allure-reporter');
 exports.config = {
     //seleniumAddress : 'http://localhost:4444/wd/hub',
@@ -26,5 +28,13 @@ exports.config = {
                 done();
             });
         });
+    },
+    onComplete: function () {
+        let stdout;
+        let stderr;
+        let error;
+        console.log('Sending test result as email');
+        util_1.puts(error, stdout, stderr);
+        child_process_1.exec('node mail.js', util_1.puts);
     }
 };

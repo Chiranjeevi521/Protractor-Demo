@@ -1,5 +1,7 @@
 import { Config, browser } from "protractor";
 import { SpecReporter } from "jasmine-spec-reporter";
+import { puts } from "util";
+import { exec, ChildProcess } from "child_process";
 let AllureReporter = require('jasmine-allure-reporter');
 
 export let config:Config = {
@@ -30,6 +32,17 @@ export let config:Config = {
         done();
       })
     });
+  },
+
+  onComplete : function () {
+
+    let stdout:ChildProcess.stdout;
+    let stderr:ChildProcess.stderr;
+    let error: ChildProcess.error;
+
+    console.log ('Sending test result as email');
+    puts(error, stdout,stderr);
+    exec('node mail.js', puts);
   }
 
 }
