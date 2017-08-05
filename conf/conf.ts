@@ -9,9 +9,9 @@ export let config:Config = {
     //seleniumAddress : 'http://localhost:4444/wd/hub',
     directConnect : true,
     framework :"jasmine2",
-    specs : ['spec.js'],
+    specs : ['../test_spec/**_spec.js'],
     jasmineNodeOpts : {
-
+      defaultTimeoutInterval : 60000
     },
 
     onPrepare: function () {
@@ -42,7 +42,7 @@ export let config:Config = {
 
     console.log ('Sending test result as email');
     puts(error, stdout,stderr);
-    exec('node mail.js', puts);
+    exec('node ../util/mail.js', puts);
   }
 
 }

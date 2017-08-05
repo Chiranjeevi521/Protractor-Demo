@@ -29,3 +29,4 @@ transporter.sendMail(mailOptions, (error, info) => {
     }
     console.log('Message %s sent: %s', info.messageId, info.response);
 });
+//# sourceMappingURL=mail.js.map

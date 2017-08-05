@@ -9,8 +9,10 @@ exports.config = {
     //seleniumAddress : 'http://localhost:4444/wd/hub',
     directConnect: true,
     framework: "jasmine2",
-    specs: ['spec.js'],
-    jasmineNodeOpts: {},
+    specs: ['../test_spec/**_spec.js'],
+    jasmineNodeOpts: {
+        defaultTimeoutInterval: 60000
+    },
     onPrepare: function () {
         jasmine.getEnv().addReporter(new jasmine_spec_reporter_1.SpecReporter({
             spec: {
@@ -35,6 +37,7 @@ exports.config = {
         let error;
         console.log('Sending test result as email');
         util_1.puts(error, stdout, stderr);
-        child_process_1.exec('node mail.js', util_1.puts);
+        child_process_1.exec('node ../util/mail.js', util_1.puts);
     }
 };
+//# sourceMappingURL=conf.js.map

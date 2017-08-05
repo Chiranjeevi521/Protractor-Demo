@@ -2,8 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const protractor_1 = require("protractor");
 var using = require('jasmine-data-provider');
-const dataprovider_1 = require("./dataprovider");
-const xlsx_1 = require("xlsx");
+//import { customlocator } from "./customlocators";
 const winston_1 = require("winston");
 describe("Test Angular Site", () => {
     beforeAll(() => {
@@ -39,38 +38,5 @@ describe("Test Angular Site", () => {
             }
         });
     });
-    xdescribe("Go to super calculator and test addition", () => {
-        beforeAll(() => {
-            protractor_1.browser.get('https://juliemr.github.io/protractor-demo/');
-        });
-        //let data1:string = "./numbers.json";
-        //let data2 = JSON.parse(data1);
-        let dataprovider = new dataprovider_1.DataProvider();
-        let plusProvider = dataprovider.plusProvider();
-        using(plusProvider, (data) => {
-            it("Supercalculator Addition", () => {
-                protractor_1.element(protractor_1.by.model('first')).sendKeys(data.a);
-                protractor_1.element(protractor_1.by.model('second')).sendKeys(data.b);
-                protractor_1.element(protractor_1.by.buttonText('Go!')).click();
-                protractor_1.browser.sleep(6000);
-                expect(protractor_1.element(protractor_1.by.tagName('h2')).getText()).toEqual(data.expected);
-            });
-        });
-        // reading data from excel file 
-        //using(plusProvider,(data)=>{
-        it("Supercalculator addition using excel data", () => {
-            protractor_1.browser.sleep(5000);
-            let workbook = xlsx_1.readFile('test.xlsx');
-            let sheetname = 'Test_Data';
-            let target = workbook.Sheets[sheetname];
-            for (var i = 2; i < 14; i++) {
-                let finalresult = String(target["C" + i].v);
-                protractor_1.element(protractor_1.by.model('first')).sendKeys(target["A" + i].v);
-                protractor_1.element(protractor_1.by.model('second')).sendKeys(target["B" + i].v);
-                protractor_1.element(protractor_1.by.buttonText('Go!')).click();
-                expect(protractor_1.element(protractor_1.by.tagName('h2')).getText()).toEqual(finalresult);
-            }
-        });
-        //});
-    });
 });
+//# sourceMappingURL=angularsite_spec.js.map

@@ -1,8 +1,8 @@
 import { by,element,browser } from "protractor";
 var using = require('jasmine-data-provider');
-import { DataProvider } from "./dataprovider";
+//import { DataProvider } from "./dataprovider";
 import { readFile, read, ColInfo, RowInfo } from "xlsx";
-import { customlocator } from "./customlocators";
+//import { customlocator } from "./customlocators";
 import { log } from "winston";
 
 describe("Test Angular Site", ()=>{
@@ -58,59 +58,6 @@ describe("Test Angular Site", ()=>{
             }
             
         });
-
-    });
-
-    xdescribe("Go to super calculator and test addition", ()=>{
-
-        beforeAll(()=>{
-
-            browser.get('https://juliemr.github.io/protractor-demo/');
-        });
-
-        //let data1:string = "./numbers.json";
-        //let data2 = JSON.parse(data1);
-
-        let dataprovider = new DataProvider();
-        let plusProvider = dataprovider.plusProvider()
-        
-
-        using(plusProvider,(data)=>{
-
-            it("Supercalculator Addition", ()=>{
-
-                element(by.model('first')).sendKeys(data.a);
-                element(by.model('second')).sendKeys(data.b);
-                element(by.buttonText('Go!')).click();
-                browser.sleep(6000);
-                expect<any>(element(by.tagName('h2')).getText()).toEqual(data.expected);
-
-            });
-  
-        });
-
-        // reading data from excel file 
-
-
-        //using(plusProvider,(data)=>{
-
-        it("Supercalculator addition using excel data", ()=>{
-
-            browser.sleep(5000);
-            let workbook = readFile('test.xlsx');
-            let sheetname = 'Test_Data';
-            let target = workbook.Sheets[sheetname];
-            for ( var i=2; i<14; i++){
-                let finalresult = String(target["C"+i].v);
-                element(by.model('first')).sendKeys(target["A"+i].v);
-                element(by.model('second')).sendKeys(target["B"+i].v);
-                element(by.buttonText('Go!')).click();
-                expect<any>(element(by.tagName('h2')).getText()).toEqual(finalresult);
-            }
-
-        });
-  
-        //});
 
     });
 

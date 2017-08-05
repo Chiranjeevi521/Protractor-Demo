@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var using = require('jasmine-data-provider');
 class DataProvider {
     plusProvider() {
         return [
@@ -12,3 +11,4 @@ class DataProvider {
     }
 }
 exports.DataProvider = DataProvider;
+//# sourceMappingURL=dataprovider.js.map

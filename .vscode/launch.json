@@ -13,7 +13,7 @@
                 "${workspaceRoot}/out/**/*.js"
             ],
             "args": [
-                "conf.js"
+                "${workspaceRoot}\\conf\\conf.js"
             ]
         }
     ]

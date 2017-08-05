@@ -1,5 +1,3 @@
-var using = require('jasmine-data-provider');
-
 export class DataProvider {
 
         plusProvider() {
@@ -10,5 +8,4 @@ export class DataProvider {
                 {a: '22', b: '13', expected: '35'},
             ];
         }
-
 }
