@@ -14,13 +14,9 @@ let transporter = nodemailer.createTransport({
 let mailOptions = {
     from: 'chiranjeevi.protractor@gmail.com',
     to: 'chiranjeevi521@gmail.com',
-    subject: 'Protractor Results',
-    text: 'Dear StakeHolders, Please see attachment for todays result',
-    html: '<b>Hello world ?</b>',
-    attachments: [{
-            'filename': 'Results.html',
-            'filePath': './allure-results/Results.xml'
-        }]
+    subject: 'Protractor Demo Results at http://localhost:8888',
+    text: 'Dear StakeHolders, Please see attachment for todays result. You can also see result at http://localhost:8888',
+    html: '<P> Welcome To Protractor Results Page. Please <a href = "http://localhost:8888">ClickHere</a> to get test results',
 };
 // send mail with defined transport object
 transporter.sendMail(mailOptions, (error, info) => {

@@ -6,12 +6,15 @@ const util_1 = require("util");
 const child_process_1 = require("child_process");
 let AllureReporter = require('jasmine-allure-reporter');
 exports.config = {
-    //seleniumAddress : 'http://localhost:4444/wd/hub',
+    //seleniumAddress : 'http://localhost:4723/wd/hub', Use 4723 for appium and 4444 for selenium web server
     directConnect: true,
     framework: "jasmine2",
     specs: ['../test_spec/**_spec.js'],
     jasmineNodeOpts: {
         defaultTimeoutInterval: 60000
+    },
+    capabilities: {
+        browserName: "chrome",
     },
     onPrepare: function () {
         jasmine.getEnv().addReporter(new jasmine_spec_reporter_1.SpecReporter({
@@ -37,7 +40,7 @@ exports.config = {
         let error;
         console.log('Sending test result as email');
         util_1.puts(error, stdout, stderr);
-        child_process_1.exec('node ../util/mail.js', util_1.puts);
+        child_process_1.exec('node ./util/mail.js', util_1.puts);
     }
 };
 //# sourceMappingURL=conf.js.map

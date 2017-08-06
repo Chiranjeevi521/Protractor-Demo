@@ -17,7 +17,7 @@ describe("Go to super calculator and test addition", () => {
     let calculatormainpage = new SupercalculatorMainPage_1.SupercalculatorMainPage();
     let elementhelper = new elementhelper_1.ElementHelper();
     using(plusProvider, (data) => {
-        xit("Supercalculator Addition", () => {
+        it("Supercalculator Addition", () => {
             calculatormainpage.addition(data.a, data.b);
             protractor_1.browser.sleep(6000);
             expect(elementhelper.resultText().getText()).toEqual(data.expected);

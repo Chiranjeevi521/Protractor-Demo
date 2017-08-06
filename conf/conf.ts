@@ -6,12 +6,19 @@ let AllureReporter = require('jasmine-allure-reporter');
 
 export let config:Config = {
 
-    //seleniumAddress : 'http://localhost:4444/wd/hub',
+    //seleniumAddress : 'http://localhost:4723/wd/hub', Use 4723 for appium and 4444 for selenium web server
     directConnect : true,
     framework :"jasmine2",
     specs : ['../test_spec/**_spec.js'],
     jasmineNodeOpts : {
       defaultTimeoutInterval : 60000
+    },
+
+    capabilities : {
+
+      browserName : "chrome",
+      //platformName : 'android',
+      //deviceName: "HT49TW901121"
     },
 
     onPrepare: function () {
@@ -42,7 +49,7 @@ export let config:Config = {
 
     console.log ('Sending test result as email');
     puts(error, stdout,stderr);
-    exec('node ../util/mail.js', puts);
+    exec('node ./util/mail.js', puts);
   }
 
 }

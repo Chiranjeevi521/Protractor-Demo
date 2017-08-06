@@ -28,7 +28,7 @@ describe("Go to super calculator and test addition", ()=>{
 
         using(plusProvider,(data)=>{
 
-            xit("Supercalculator Addition", ()=>{
+            it("Supercalculator Addition", ()=>{
 
                 calculatormainpage.addition(data.a,data.b)
                 browser.sleep(6000);
