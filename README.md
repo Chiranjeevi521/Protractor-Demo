@@ -110,11 +110,11 @@ clone this repository and perform npm install
 3)	Wherever you need, just add a log ( Ex : log("info",'Successfully verified title'); )
 
 # To Enable Jasmine Spec Reporter: 
-1)	Add dependencies for the project
+1) Add dependencies for the project
     a.	CMD into Protractor_Demo folder
     b.	install Jasmine spec reporter as a dependency using command :  npm i –D jasmine-spec-reporter
-2)	Import Jasmine-spec-reporter into your conf file ( Ex : import { SpecReporter } from "jasmine-spec-reporter"; )
-3)	To display stack trace place below mentioned code 
+2) Import Jasmine-spec-reporter into your conf file ( Ex : import { SpecReporter } from "jasmine-spec-reporter"; )
+3) To display stack trace place below mentioned code 
         onPrepare: function () {
             jasmine.getEnv().addReporter(new SpecReporter({
               spec: {
@@ -123,23 +123,23 @@ clone this repository and perform npm install
             }));
 
 # To Enable Jasmine Allure Reporter: 
-1)	Configuring Maven
+1) Configuring Maven
     a.	To use Allure reports, we need a maven plugin
     b.	1. Download “ apache-maven-3.5.0-bin.zip “ maven from https://maven.apache.org/download.cgi site
         2. Add environment variable M2_HOME with the value as path to apache-maven-3.5.0 folder.
         3. Add environment path variable like %M2_HOME%\bin 
     c.	Open CMD and type mvn –verision  If you get version details, then maven configured successfully
-2)	Add dependencies to the project
+2) Add dependencies to the project
     a.	CMD into Protractor_Demo folder
     b.	install allure-reporter as a dependency using command :  npm i –D jasmine-allure-reporter
-3)	To Get Allure Reporter XML Files : 
+3) To Get Allure Reporter XML Files : 
     a.	At protractor.conf.ts file import AllureReporter ( Ex : let AllureReporter = require('jasmine-allure-reporter'); )
     b.	Inside OnPrepare function add below mentioned code : 
         jasmine.getEnv().addReporter(new AllureReporter({
             resultsDir: 'allure-results'
             }));
     c.	Run the Protractor protractor.conf.js –> Test results will be saved as xml files inside Protractor_Demo/allure-results folder
-4)	To Get Screen shots : 
+4) To Get Screen shots : 
     a.	At protractor.conf.ts file, Inside OnPrepare function add below mentioned code : 
             jasmine.getEnv().afterEach(function(done){
               browser.takeScreenshot().then(function (png) {
